@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import rc, font_manager
-import seaborn as sns
 import numpy as np
 
 #한글 출력을 위한 설정
