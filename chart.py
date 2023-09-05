@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 from matplotlib import rc, font_manager
 
 #한글 출력을 위한 설정
-font_path = "GULIM.TTC"
+#font_path = "GULIM.TTC"
+font_path ="NanumGothic-Regular.ttf"
 font = font_manager.FontProperties(fname=font_path).get_name()
 plt.rc('font', family=font)
 
