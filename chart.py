@@ -5,9 +5,21 @@ from matplotlib import rc, font_manager
 
 #한글 출력을 위한 설정
 #font_path = "GULIM.TTC"
-font_path ="NanumGothic-Regular.ttf"
-font = font_manager.FontProperties(fname=font_path).get_name()
-plt.rc('font', family=font)
+#font_path ="NanumGothic-Regular.ttf"
+#font = font_manager.FontProperties(fname=font_path).get_name()
+#plt.rc('font', family=font)
+
+@st.cache_data
+def fontRegistered():
+    font_dirs = [os.getcwd() + '/customFonts']
+    font_files = fm.findSystemFonts(fontpaths=font_dirs)
+
+    for font_file in font_files:
+        fm.fontManager.addfont(font_file)
+    fm._load_fontmanager(try_read_cache=False)
+
+
+
 
 # DataFrame 생성
 data = pd.DataFrame({
