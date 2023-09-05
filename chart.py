@@ -32,7 +32,7 @@ st.dataframe(data, use_container_width=True)
 fig1, ax = plt.subplots()
 plt.title("개인별 나이")
 ax.bar(data['이름'], data['나이'])
-
+plt.rc('font', family='NanumGothic')
 #ax.patches는 그래프의 모든 막대 정보를 나타내는 리스트
 for p in ax.patches:
     ax.annotate(format(p.get_height(), '.1f'),
