@@ -9,17 +9,12 @@ from matplotlib import rc, font_manager
 #font = font_manager.FontProperties(fname=font_path).get_name()
 #plt.rc('font', family=font)
 
-@st.cache_data
-def fontRegistered():
-    font_dirs = [os.getcwd() + '/customFonts']
-    font_files = fm.findSystemFonts(fontpaths=font_dirs)
+font_dirs = [os.getcwd() + '/customFonts']
+font_files = fm.findSystemFonts(fontpaths=font_dirs)
 
-    for font_file in font_files:
-        fm.fontManager.addfont(font_file)
-    fm._load_fontmanager(try_read_cache=False)
-
-
-fontRegistered()
+for font_file in font_files:
+    fm.fontManager.addfont(font_file)
+fm._load_fontmanager(try_read_cache=False)
 
 # DataFrame 생성
 data = pd.DataFrame({
