@@ -19,7 +19,7 @@ def fontRegistered():
     fm._load_fontmanager(try_read_cache=False)
 
 
-
+fontRegistered()
 
 # DataFrame 생성
 data = pd.DataFrame({
