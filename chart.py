@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import rc, font_manager
+import os
+import matplotlib.font_manager as fm
 
 #한글 출력을 위한 설정
 #font_path = "GULIM.TTC"
